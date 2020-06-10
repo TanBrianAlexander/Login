@@ -9,25 +9,42 @@
 <link rel="stylesheet" type = "text/css" href="login.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script defer src="login.js"></script>
 <style type="text/css">
 </style>
 </head>
 <body>
 <div class="login-form">
     <form action="/examples/actions/confirmation.php" method="post">
-        <h2 class="text-center">Log in</h2>       
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Username" required="required">
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" required="required">
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Log in</button>
-        </div>
         
-    </form>
+        <h2 class="text-center">Log in</h2> 
+        
+        <h3 id="admin-text">It works</h3>
+        <div class="form-group">
+            <input type="text" class="form-control" id="user" placeholder= "Enter Username" required="required">
+        </div>
 
+        <!--ADDED-->
+        <p id="required-user">*This field cannot be empty</p>
+        <!--ADDED-->
+
+        <div class="form-group">
+            <input type="password" class="form-control" id="pass" placeholder="Enter Password" required="required">
+        </div>
+        <!--ADDED-->
+        <p id="required-pass">*This field cannot be empty</p>
+        <!--ADDED-->
+
+        <div class="form-group">
+            <!--ADDED  onclickgetobj-->
+            <button type="button" onclick="getObj()" class="btn btn-primary btn-block">Log in</button>
+            <h3 id="user-text">It works</h3>
+            
+            <!--ADDED   h3 id it works-->
+        </div>
+    </form>
+    <script src="Script.js"></script>
 </div>
+
 </body>
-</html>                                		
+</html>             
